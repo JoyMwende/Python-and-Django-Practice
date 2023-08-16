@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form</title>
+    <style>
+      table {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 5px;
+      }
+
+      /* Match all <i> elements in all first child <p> elements */
+      p:first-child i {
+        color: blue;
+      }
+
+      /* CSS - The :lang Pseudo-class
+The :lang pseudo-class allows you to define special rules for different languages. */
+      q:lang(no) {
+        quotes: "~""~";
+      }
+    </style>
+  </head>
+  <body>
+    <!-- display a list in html 5 -->
+    <form action="">
+      <div>
+        <input name="country" list="countries" placeholder="Country" />
+        <datalist id="countries">
+          <option value="India"></option>
+          <option value="USA"></option>
+          <option value="UK"></option>
+          <option value="Canada"></option>
+          <option value="Australia"></option>
+        </datalist>
+      </div>
+    </form>
+
+    <br />
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Joy</td>
+          <td>24</td>
+          <td>Female</td>
+        </tr>
+        <tr>
+          <td>George</td>
+          <td>26</td>
+          <td>Male</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Match all <i> elements in all first child <p> elements -->
+    <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+    <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+
+    <div>
+      <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+      <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+    </div>
+
+    <!-- CSS - The :lang Pseudo-class
+The :lang pseudo-class allows you to define special rules for different languages. -->
+    <p>Some text <q lang="no">A quote in a paragraph</q> Some text.</p>
+    <p>
+      In this example, :lang defines the quotation marks for q elements with
+      lang="no":
+    </p>
+  </body>
+</html>

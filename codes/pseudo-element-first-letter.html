@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-element CSS Selector</title>
+    <style>
+      p::first-letter {
+        color: limegreen;
+        font-size: 48px;
+      }
+      p.intro::first-letter {
+        color: orangered;
+        font-size: 35px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- syntax of pseudo-elements -->
+    <!-- selector::pseudo-element {
+            property: value;
+        } -->
+        <p>This is the ::first-letter pseudo element</p>
+        <p class="intro">This is the pseudo-element with class</p>
+  </body>
+</html>

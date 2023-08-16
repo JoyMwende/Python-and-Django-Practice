@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <style>
+      /* descendant selector */
+      ul li {
+        color: blue;
+      }
+
+      /* child selector */
+      /* ul > li {
+            color: blue;
+        } */
+
+      /* attribute selector */
+      a {
+        color: blue;
+      }
+      a[href="https://facebook.com"]
+      {
+        color: red;
+      }
+
+      /* pseudo-class selector */
+      button {
+        width: 200px;
+        height: 50px;
+        font-size: 24px;
+        background-color: green;
+      }
+      button:hover {
+        background-color: orange;
+      }
+
+      a.highlight:hover {
+        color: #ff0000;
+        font-size: 22px;
+      }
+
+      /* hovering on div */
+      div:hover {
+        background-color: blue;
+      }
+
+      /* adjacent sibling selector */
+      div + p {
+        background-color: yellow;
+      }
+
+      /* :first-child pseudo-class */
+      p i:first-child {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- descendant and child selectors -->
+    <ol>
+      <li>List item one</li>
+      <li>List item two</li>
+      <ul>
+        <li>sublist item one</li>
+        <li>sublist item two</li>
+      </ul>
+      <li>list item three</li>
+    </ol>
+
+    <!-- attribute selector -->
+    <ul>
+      <li><a href="https://google.com">Google</a></li>
+      <li><a href="https://facebook.com">Facebook</a></li>
+      <li><a href="https://amazon.com">Amazon</a></li>
+    </ul>
+
+    <!-- pseudo-class selector -->
+    <h2>Pseudo-classes and HTML Classes</h2>
+
+    <button>CLick Me</button>
+
+    <p>
+      When you hover over the first link below, it will change color and font
+      size:
+    </p>
+
+    <p><a class="highlight" href="css_syntax.asp">CSS Syntax</a></p>
+
+    <p><a href="default.asp">CSS Tutorial</a></p>
+
+    <!-- adjacent sibling selector and general sibling selector -->
+    <div>
+      <p>This is a paragraph.</p>
+      <p>This is a paragraph.</p>
+    </div>
+    <p>This is a paragraph.</p>
+    <p>This is a paragraph.</p>
+
+    
+    <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+    <p>I am a <i>strong</i> person. I am a <i>strong</i> person.</p>
+  </body>
+</html>
