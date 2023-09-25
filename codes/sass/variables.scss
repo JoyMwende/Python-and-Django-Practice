@@ -1,0 +1,99 @@
+// This is a css file using the Sass syntax/language. Sass adds additional features to CSS,
+// such as variables, nesting, and mixins to make it more pwerful. Sass is compiled into CSS before the
+// browser renders it.
+
+
+// variables
+$color: red;
+
+ul {
+    font-size: 14px;
+    color: $color;
+}
+
+ol {
+    font-size: 18px;
+    color: $color;
+}
+
+// nesting
+div {
+    font-size: 18px;
+
+    ul{
+        color: green;
+    }
+    p{
+        color: blue;
+    }
+}
+
+// when the nesting code is turned into css code, the css code looks like this::after
+div {
+    font-size: 18px;
+}
+    div p {
+        color: blue;
+    }
+
+    div ul {
+        color: green;
+    }
+
+
+
+// inheritance 
+%message {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+.success {
+    @extend %message;
+    background-color: green;
+}
+
+.alert {
+    @extend %message;
+    background-color: yellow;
+}
+
+.error {
+    @extend %message;
+    background-color: red;
+}
+
+// this means that there are let say three divs e.g success message, alert message and error message, which have 
+// many similar properties and little different properties like the background color. The %message specifies the common
+// properties of the three divs. The success div shows that it extends (inherit) the properties of the %message and
+// then the div will have a background color of green. The alert div shows that it extends (inherit) the properties of the %message and
+// then the div will have a background color of yellow. The error div shows that it extends (inherit) the properties of the %message and
+// then the div will have a background color of red.
+
+
+// below is the translation of the scss code of inheritance to css code:
+.success, .alert, .error {
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+.success {
+    background-color: green;
+}
+
+.alert {
+    background-color: yellow;
+}
+
+.error {
+    background-color: red;
+}
+
+// compiling:
+// sass variables.scss:variables.css
